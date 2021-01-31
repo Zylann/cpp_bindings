@@ -27,7 +27,7 @@ jobs:
           scons target=release generate_bindings=yes -j $(nproc)
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2.2.2
         with:
           name: godot-cpp-linux-glibc2.23-x86_64-release
           path: bin/libgodot-cpp.linux.release.64.a
@@ -56,7 +56,7 @@ jobs:
           scons target=release generate_bindings=yes -j $env:NUMBER_OF_PROCESSORS
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2.2.2
         with:
           name: godot-cpp-windows-msvc2019-x86_64-release
           path: bin/libgodot-cpp.windows.release.64.lib
@@ -90,7 +90,7 @@ jobs:
           scons target=release generate_bindings=yes use_mingw=yes -j $env:NUMBER_OF_PROCESSORS
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2.2.2
         with:
           name: godot-cpp-linux-mingw-x86_64-release
           path: bin/libgodot-cpp.windows.release.64.a
@@ -119,7 +119,7 @@ jobs:
           scons target=release generate_bindings=yes -j $(sysctl -n hw.logicalcpu)
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v2.2.1
+        uses: actions/upload-artifact@v2.2.2
         with:
           name: godot-cpp-macos-x86_64-release
           path: bin/libgodot-cpp.osx.release.64.a
